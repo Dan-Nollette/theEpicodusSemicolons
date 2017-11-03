@@ -35,3 +35,5 @@ setup steps:
 2: bower init
 
 3: bower install bootstrap --save
+
+4: npm install angularfire2@4.0.0-rc.0 firebase@^3.6.6 --save
