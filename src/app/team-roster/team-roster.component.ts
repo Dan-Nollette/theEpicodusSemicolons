@@ -7,16 +7,20 @@ import { FirebaseListObservable } from 'angularfire2/database'
 @Component({
   selector: 'app-team-roster',
   templateUrl: './team-roster.component.html',
-  styleUrls: ['./team-roster.component.css']
+  styleUrls: ['./team-roster.component.css'],
   providers: [TeammateService]
 })
 export class TeamRosterComponent implements OnInit {
   teammates: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
-  constructor(private router: Router, private teammateService: TeammateService)) { }
 
-  ngOnInit()
+  constructor(private router: Router, private teammateService: TeammateService) {}
+
+  ngOnInit(){
     this.teammates = this.teammateService.getTeammates();
   }
 
+  goToDetailPage(clickedTeammate) {
+    this.router.navigate(['teammates', clickedTeammate.$key]);
+  };
 }

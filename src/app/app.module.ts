@@ -6,26 +6,39 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
-import { AdminComponent } from './admin/admin.component';
-import { PlayerDetailComponent } from './player-detail/player-detail.component';
-import { EditPlayerComponent } from './edit-player/edit-player.component';
 import { TeamRosterComponent } from './team-roster/team-roster.component';
+import { PlayerDetailComponent } from './player-detail/player-detail.component';
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AdminComponent } from './admin/admin.component';
+import { EditPlayerComponent } from './edit-player/edit-player.component';
+
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     AboutComponent,
-    AdminComponent,
+    TeamRosterComponent,
     PlayerDetailComponent,
-    EditPlayerComponent,
-    TeamRosterComponent
+    AdminComponent,
+    EditPlayerComponent
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

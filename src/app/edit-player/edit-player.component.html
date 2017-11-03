@@ -1,3 +1,15 @@
-<p>
-  edit-player works!
-</p>
+<h4>Edit Teammate</h4>
+
+<label>New Teammate Name:</label>
+<input [(ngModel)]="selectedTeammate.name">
+<br>
+
+<label>New Teammate Position:</label>
+<input [(ngModel)]="selectedTeammate.Position">
+<br>
+
+<label>New Teammate Playstyle:</label>
+<input [(ngModel)]="selectedTeammate.playStyle">
+<button (click)="beginUpdatingTeammate(selectedTeammate)">Update</button>
+<hr>
+<button (click)="beginDeletingTeammate(selectedTeammate)">Delete</button>
