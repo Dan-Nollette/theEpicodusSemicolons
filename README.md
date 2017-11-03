@@ -28,12 +28,30 @@ Before running the tests make sure you are serving the app via `ng serve`.
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-setup steps:
+## Setup steps:
 
-1: git clone https://github.com/Dan-Nollette/theEpicodusSemicolons.git
+1: In the terminal run `git clone https://github.com/Dan-Nollette/theEpicodusSemicolons.git`
 
-2: bower init
+2: In the terminal run `bower init`
 
-3: bower install bootstrap --save
+3: In the terminal run `bower install bootstrap --save`
 
-4: npm install angularfire2@4.0.0-rc.0 firebase@^3.6.6 --save
+4: In the terminal run `npm install angularfire2@4.0.0-rc.0 firebase@^3.6.6 --save`
+
+5: This App requires a firebase API key in order to work. If you don't have one already you can sign up here (https://firebase.google.com/). Once you sign up, click "Add Firebase to your web app". Save the html snippet that then pops up.
+
+Once you have the relevant data handy, create a file in the root of the project named src/app/api-keys.ts
+The content should be as follows with the specifics filled in based on the snippet you got from firebase:
+```
+  export var masterFirebaseConfig = {
+    apiKey: "xxxx",
+    authDomain: "xxxx.firebaseapp.com",
+    databaseURL: "https://xxxx.firebaseio.com",
+    storageBucket: "xxxx.appspot.com",
+    messagingSenderId: "xxxx"
+  };
+```
+
+6: In the terminal run `ng serve` while in the project directory
+
+7: In your browser of choice enter the URL http://localhost:4200/

@@ -1,3 +1,17 @@
 .logo {
   padding-left: 30%;
 }
+#semicolon {
+  max-width: 50%;
+}
+.container {
+  padding-bottom: 25px;
+}
+.container, .navbar {
+  background-color: lightgreen;
+}
+
+.container, .navbar, img {
+  border: 3px solid blue;
+  border-radius: 12px;
+}
