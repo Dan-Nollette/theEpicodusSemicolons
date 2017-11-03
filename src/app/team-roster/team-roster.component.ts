@@ -21,6 +21,6 @@ export class TeamRosterComponent implements OnInit {
   }
 
   goToDetailPage(clickedTeammate) {
-    this.router.navigate(['teammates', clickedTeammate.$key]);
+    this.router.navigate(['players', clickedTeammate.$key]);
   };
 }

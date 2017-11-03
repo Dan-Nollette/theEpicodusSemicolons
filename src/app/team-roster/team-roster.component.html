@@ -2,7 +2,8 @@
 
 <div *ngFor="let teammate of teammates | async" class="panel panel-default">
   <div class="panel-body">
-    <h3 (click)="goToDetailPage(teammate)"><em>{{teammate.name}}</em> by {{teammate.position}}</h3>
+    <h3 (click)="goToDetailPage(teammate)"><em>{{teammate.name}}</em> </h3>
+    <p>position: {{teammate.position}}</p>
     <div *ngIf="currentRoute === '/admin'">
       {{teammate.playStyle}}
       <hr>
