@@ -1,0 +1,20 @@
+{
+  "name": "the-epicodus-semicolons",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Dan Nollette <nollette.dan@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Dan-Nollette/theEpicodusSemicolons",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
