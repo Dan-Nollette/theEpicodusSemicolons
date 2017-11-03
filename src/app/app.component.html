@@ -1,4 +1,27 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="">The Epicodus Semicolons</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a routerLink="about">About</a></li>
+      <li><a routerLink="team-roster">Team Roster</a></li>
+    </ul>
+  </div>
+</nav>
+
 <div class="container">
-  <h1>{{title}}</h1>
+  <div class="logo">
+    <img src="./assets/img/logo.jpg" alt="A banner with reading 'Quidditch' overlayed by crossed brooms.">
+    <br>
+    <h1>{{title}}</h1>
+  </div>
+
   <router-outlet></router-outlet>
 </div>
+
+<footer class="footer">
+  <div class="container">
+    <a class="text-muted" routerLink="admin">Admin</a>
+  </div>
+</footer>

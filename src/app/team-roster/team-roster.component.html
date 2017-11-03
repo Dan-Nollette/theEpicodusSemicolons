@@ -1,0 +1,13 @@
+
+<h2>Team Roster</h2>
+
+<div *ngFor="let teammate of teammates | async" class="panel panel-default">
+  <div class="panel-body">
+    <h3 (click)="goToDetailPage(teammate)"><em>{{teammate.title}}</em> by {{teammate.artist}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      {{teammate.description}}
+      <hr>
+      <app-edit-player [selectedTeammate]="teammate"></app-edit-player>
+    </div>
+  </div>
+</div>
